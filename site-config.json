@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "shadowClawVersion": "2ca10c913e97c37bab795dd59352742ea6293d07",
+  "shadowClawVersion": "1847cd4e8e77998d7d6a1ae429f83be3aaafe4ed",
   "site": {
     "title": "ShadowClaw Template",
     "description": "Published with ShadowClaw",
@@ -25,5 +25,8 @@
   },
   "pwa": {
     "manifestPath": "manifest.json"
+  },
+  "settings": {
+    "defaultToolsProfile": "__builtin_default"
   }
 }
