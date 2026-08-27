@@ -14,6 +14,9 @@
     "appleTouchIconPath": "assets/icons/favicon.svg",
     "notFoundPath": "404.html"
   },
+  "pwa": {
+    "manifestPath": "manifest.json"
+  },
   "sitemapPath": "sitemap.xml",
   "assets": ["assets"],
   "sidebar": {
@@ -22,9 +25,6 @@
     "tasksHidden": false,
     "filesHidden": false,
     "defaultPage": "pages"
-  },
-  "pwa": {
-    "manifestPath": "manifest.json"
   },
   "settings": {
     "defaultToolsProfile": "__builtin_default"
