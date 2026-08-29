@@ -20,6 +20,18 @@ This is a starter template for publishing your own static site using
 
 No ShadowClaw source lives in this repo — only your content and the workflow.
 
+## Local Development
+
+To run or build your template site locally, use the `shadow-claw` CLI:
+
+```bash
+# Preview and run live dev server on http://127.0.0.1:8888
+npx shadow-claw dev
+
+# Or build the static distribution locally into ./dist/public
+npx shadow-claw build
+```
+
 ## Quick start
 
 1. Click **Use this template** on GitHub (or fork/clone).
