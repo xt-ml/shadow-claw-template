@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "shadowClawVersion": "d3b5b17d6fae0b419abf867f77e8fba2477b6139",
+  "shadowClawVersion": "cdeca12482db22d7a5c6e7d2ff0a9b3e3cc2b129",
   "site": {
     "title": "ShadowClaw Template",
     "description": "Published with ShadowClaw",
