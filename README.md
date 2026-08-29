@@ -1,4 +1,4 @@
-# ShadowClaw Template
+# [ShadowClaw Template](https://xt-ml.github.io/shadow-claw-template/)
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/xt-ml/shadow-claw-template)
 
@@ -102,7 +102,7 @@ execution:
 ---
 ```
 
-#### Pipeline Features:
+#### Pipeline Features
 
 1. **Output Pipelining (`$pipe`)**: Pass outputs between steps using:
    - `{ "$pipe": "prev" }` — output of the immediately preceding step.
@@ -143,7 +143,7 @@ Add executable tools under `.agents/tools/main/` as JSON files. Each file define
 }
 ```
 
-#### Execution Types:
+#### Execution Types
 
 - **`javascript`**: Runs inside ShadowClaw's sandboxed JavaScript worker. The parsed arguments are available via `data`. Single expressions evaluate and return automatically.
 - **`bash`**: Runs through the sandboxed JS shell / WebVM. Arguments are passed as serialized JSON via `stdin`.
