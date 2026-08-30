@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout content repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: content
 
@@ -90,13 +90,13 @@ jobs:
           echo "ref=$REF" >> "$GITHUB_OUTPUT"
 
       - name: Checkout ShadowClaw core (build toolchain)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: xt-ml/shadow-claw
           path: shadow-claw
           ref: ${{ steps.resolve-ref.outputs.ref }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "24"
           cache: npm
