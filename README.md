@@ -177,7 +177,6 @@ Configure your site metadata, branding, navigation visibility, tool defaults, an
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "shadowClawVersion": "main",
   "site": {
     "title": "My Site",
     "description": "Published with ShadowClaw",
@@ -220,9 +219,9 @@ Configure your site metadata, branding, navigation visibility, tool defaults, an
 
 `enabledTools` specifies the initial active tool profile applied on first run for the main conversation. When omitted, ShadowClaw uses its standard default tool profile. User modifications made later in the UI are preserved.
 
-### Version Pinning (`shadowClawVersion`)
+### Version Pinning
 
-You can set `shadowClawVersion` in `site-config.json` to `"main"`, a release tag (e.g. `"v1.20.0"`), or a git commit SHA (e.g. `"62253c53"`). Alternatively, place a `.shadowclaw-version` file in the root of your repository or pass `shadowclaw_ref` when triggering the GitHub Actions workflow manually.
+ShadowClaw builds via `npx --yes shadow-claw@latest build --prod`. To pin to a specific npm release (e.g. `1.23.3`), specify the version in `.github/workflows/deploy-pages.yml` or supply `shadowclaw_version` when triggering the GitHub Actions workflow manually.
 
 ### Skill & Page Purge Markers
 
