@@ -41,14 +41,14 @@ npx shadow-claw build
    no `pages/` directory still builds with ShadowClaw's default Pages content.
 4. Optionally add skills under `.agents/skills/main/`; a repository without that directory simply has no bundled skills.
 5. Optionally add tools under `.agents/tools/main/`; a repository without that directory has no bundled custom tools.
-6. Optionally configure `site-config.json` (repo root) for site branding, sidebar navigation visibility, initial tool enablement (`enabledTools`), and page sort order.
+6. Optionally configure `shadow-claw.config.json` (repo root) for site branding, sidebar navigation visibility, initial tool enablement (`enabledTools`), and page sort order.
 7. Optionally edit `pages/resources/routes.json` to add pretty-path URLs.
 8. Push to `main` — the workflow builds and deploys automatically.
 
 ## Directory layout
 
 ```txt
-site-config.json     ← declarative site branding, sidebar, enabled tools, and sorting config
+shadow-claw.config.json   ← declarative site branding, sidebar, enabled tools, and sorting config
 pages/
   main/
     index.html        ← your home page
@@ -170,7 +170,7 @@ Add executable tools under `.agents/tools/main/` as JSON files. Each file define
 
 ---
 
-## Declarative Site Configuration (`site-config.json`)
+## Declarative Site Configuration (`shadow-claw.config.json`)
 
 Configure your site metadata, branding, navigation visibility, tool defaults, and sorting declaratively without touching source code:
 
@@ -278,7 +278,7 @@ When a visitor loads the root URL (`/`) of your published site, ShadowClaw autom
 
 1. Both the static site build pipeline (`prerender-dsd-shell`) and runtime page store (`orchestratorStore`) collect all files in `pages/main/`.
 2. `MEMORY.md` is always sorted to the bottom of the list.
-3. All other pages are sorted by `pages.sortOrder` from `site-config.json` (`"desc"` by default, natural numeric, or `"asc"`).
+3. All other pages are sorted by `pages.sortOrder` from `shadow-claw.config.json` (`"desc"` by default, natural numeric, or `"asc"`).
 4. The first file in this sorted list (`pages[0]`) becomes the **default page** pre-rendered into the DSD shell at `/`.
 
 ---

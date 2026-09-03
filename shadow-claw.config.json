@@ -3,12 +3,14 @@
   "site": {
     "title": "ShadowClaw Template",
     "description": "Published with ShadowClaw",
-    "siteUrl": "https://xt-ml.github.io/shadow-claw-template/",
-    "repoUrl": "https://github.com/xt-ml/shadow-claw-template",
-    "repoLabel": "ShadowClaw Template on GitHub"
+    "themeColor": "#121212",
+    "lang": "en"
   },
   "branding": {
     "titleText": "ShadowClaw Template",
+    "siteUrl": "https://xt-ml.github.io/shadow-claw-template/",
+    "repoUrl": "https://github.com/xt-ml/shadow-claw-template",
+    "repoLabel": "ShadowClaw Template on GitHub",
     "faviconPath": "assets/icons/favicon.svg",
     "appleTouchIconPath": "assets/icons/favicon.svg",
     "notFoundPath": "404.html"
