@@ -63,10 +63,37 @@ pages/
   tools/
     main/
       generate_random_number.json ← optional executable tool definition
+  scripts/
+    main/
+      starter-tools.js ← portable ESM logic with zero DOM dependencies
+.well-known/
+  agent-skills/
+    index.json        ← standard skills discovery index (RFC v0.2.0)
 .github/
   workflows/
     deploy-pages.yml  ← the build + deploy workflow (no changes needed)
 ```
+
+### 🌐 Agent Skills Discovery via Well-Known Endpoint
+
+External AI agents and peer ShadowClaw instances discover and consume your skills headlessly over HTTPS per the [Agent Skills Discovery RFC](https://github.com/cloudflare/agent-skills-discovery-rfc) via:
+
+```
+/.well-known/agent-skills/index.json
+```
+
+Generate or refresh this index anytime using the ShadowClaw CLI:
+
+```bash
+npx shadow-claw skills:index
+```
+
+### 🧩 Decoupled Architecture: Scripts vs. Presentation Adapters
+
+To make your tools reusable across both headless worker threads and on-page UI components:
+
+- **Portable Scripts (`.agents/scripts/main/<name>.js`)**: Pure ESM containing business logic, computations, and parameter normalization. Zero DOM or browser dependencies.
+- **Presentation Adapters (`pages/main/<name>-adapter.js`)**: Imports portable scripts to synchronize custom elements, render UI controls, and bridge `BroadcastChannel` events.
 
 ### Declarative Agent Skills (`.agents/skills/main/`)
 

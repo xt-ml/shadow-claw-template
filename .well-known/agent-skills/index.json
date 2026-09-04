@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "name": "ShadowClaw Template",
+  "description": "Published with ShadowClaw",
+  "skills": [
+    {
+      "name": "toast-random-number",
+      "type": "skill-md",
+      "description": "Generate a random integer from 1 to 1000000 and show it in a ShadowClaw toast notification.",
+      "url": "../../.agents/skills/main/toast-random-number/SKILL.md",
+      "digest": "sha256:e5310af2083048d34619a6ffcfdc22ff7e0f818f1c8aa56991540dab3d62cc99",
+      "tools": [
+        {
+          "name": "generate_random_number",
+          "url": "../../.agents/tools/main/generate_random_number.json",
+          "digest": "sha256:daf69f22c7c852b10122ef06812f760d97a31dde098450e41a4b4a65549c030c"
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "generate_random_number",
+      "description": "Generate a random integer within a specified range (min through max, inclusive).",
+      "url": "../../.agents/tools/main/generate_random_number.json",
+      "digest": "sha256:daf69f22c7c852b10122ef06812f760d97a31dde098450e41a4b4a65549c030c"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "starter-tools",
+      "description": "Portable ESM engine logic and tool execution handler for starter-tools.",
+      "url": "../../.agents/scripts/main/starter-tools.js",
+      "digest": "sha256:a31d699969cf4afdb61c5b84b084a51587dad1b0e087ac5d408168756cbf1bc0"
+    }
+  ],
+  "dependencies": {
+    "tools": ["../../.agents/tools/main/generate_random_number.json"],
+    "scripts": ["../../.agents/scripts/main/starter-tools.js"]
+  }
+}
