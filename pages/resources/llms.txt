@@ -1,0 +1,18 @@
+# [ShadowClaw Template](https://xt-ml.github.io/shadow-claw-template/)
+
+> Starter template for publishing a static site with ShadowClaw as the build engine. Content lives in `pages/main/`; the included GitHub Actions workflow builds and deploys to GitHub Pages.
+
+## Docs
+
+- [README](https://xt-ml.github.io/shadow-claw-template/README.md): How the template works and local development
+- [AGENTS.md](https://xt-ml.github.io/shadow-claw-template/AGENTS.md): Conventions for AI agents working on a template site
+
+## Pages
+
+- [Home](https://xt-ml.github.io/shadow-claw-template/main)
+- [About](https://xt-ml.github.io/shadow-claw-template/main/about)
+- [Memory](https://xt-ml.github.io/shadow-claw-template/main/memory)
+
+## Related
+
+- [ShadowClaw](https://xt-ml.github.io/shadow-claw/llms.txt)
