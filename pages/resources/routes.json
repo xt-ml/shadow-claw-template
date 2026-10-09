@@ -1,13 +1,13 @@
 {
   "routes": {
     "/pages/main/index.html": {
-      "prettyPath": "/main"
+      "prettyPath": "/main/"
     },
     "/pages/main/~/content/01-about.md": {
-      "prettyPath": "/main/about"
+      "prettyPath": "/main/about/"
     },
     "/pages/main/MEMORY.md": {
-      "prettyPath": "/main/memory"
+      "prettyPath": "/main/memory/"
     }
   }
 }

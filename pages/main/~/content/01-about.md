@@ -13,4 +13,4 @@ Replace this file with your own content and add more pages to `pages/main/`.
 
 ---
 
-⬅️ [Previous Page](/main) | ➡️ [Next Page](/main/memory)
+⬅️ [Previous Page](/main/) | ➡️ [Next Page](/main/memory/)
