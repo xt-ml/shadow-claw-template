@@ -4,6 +4,13 @@
   "description": "Published with ShadowClaw",
   "skills": [
     {
+      "name": "skill-creator",
+      "type": "skill-md",
+      "description": "Create, edit, review, and validate ShadowClaw declarative skills and their supporting resources.",
+      "url": "../../.agents/skills/main/skill-creator/SKILL.md",
+      "digest": "sha256:21cdf3af5603edd566c6cca9a02c8ac2489b51ff0d984862fb09804c72bd553a"
+    },
+    {
       "name": "toast-random-number",
       "type": "skill-md",
       "description": "Generate a random integer from 1 to 1000000 and show it in a ShadowClaw toast notification.",
