@@ -9,8 +9,8 @@ This is a starter template for publishing your own static site using
 
 1. You write your content as markdown (`.md`) or HTML (`.html`) files under
    `pages/main/`.
-2. You can add Agent Skills under `.agents/skills/main/`. Each skill is a directory containing a standard `SKILL.md`; these skills are available to the main ShadowClaw conversation.
-3. You can add Declarative Tools under `.agents/tools/main/` as JSON files to declare custom executable tools for your site.
+2. You can add Agent Skills under `.agents/skills/`. Each skill is a directory containing a standard `SKILL.md`; these skills are available to the main ShadowClaw conversation.
+3. You can add Declarative Tools under `.agents/tools/` as JSON files to declare custom executable tools for your site.
 4. When you push to `main`, the included GitHub Actions workflow:
    - Checks out ShadowClaw's source as a **build dependency** (not redistributed).
    - Copies your `pages/` and `.agents/` into the build root.
@@ -39,8 +39,8 @@ npx shadow-claw build
    **GitHub Actions**.
 3. Optionally drop your markdown files into `pages/main/`. A repository with
    no `pages/` directory still builds with ShadowClaw's default Pages content.
-4. Optionally add skills under `.agents/skills/main/`; a repository without that directory simply has no bundled skills.
-5. Optionally add tools under `.agents/tools/main/`; a repository without that directory has no bundled custom tools.
+4. Optionally add skills under `.agents/skills/`; a repository without that directory simply has no bundled skills.
+5. Optionally add tools under `.agents/tools/`; a repository without that directory has no bundled custom tools.
 6. Optionally configure `shadow-claw.config.json` (repo root) for site branding, sidebar navigation visibility, initial tool enablement (`enabledTools`), and page sort order.
 7. Optionally edit `pages/resources/routes.json` to add pretty-path URLs.
 8. Push to `main` — the workflow builds and deploys automatically.
@@ -57,15 +57,12 @@ pages/
   resources/          ← root level files & resources (routes.json, 404.html, manifest.json, sitemap.xml / sitemap.txt, favicon.svg, assets/)
 .agents/
   skills/
-    main/
-      toast-random-number/
-        SKILL.md      ← optional Agent Skills for the main conversation
+    toast-random-number/
+      SKILL.md      ← optional Agent Skills for the main conversation
   tools/
-    main/
-      generate_random_number.json ← optional executable tool definition
+    generate_random_number.json ← optional executable tool definition
   scripts/
-    main/
-      starter-tools.js ← portable ESM logic with zero DOM dependencies
+    starter-tools.js ← portable ESM logic with zero DOM dependencies
 .well-known/
   agent-skills/
     index.json        ← standard skills discovery index (RFC v0.2.0)
@@ -92,12 +89,12 @@ npx shadow-claw skills:index
 
 To make your tools reusable across both headless worker threads and on-page UI components:
 
-- **Portable Scripts (`.agents/scripts/main/<name>.js`)**: Pure ESM containing business logic, computations, and parameter normalization. Zero DOM or browser dependencies.
+- **Portable Scripts (`.agents/scripts/<name>.js`)**: Pure ESM containing business logic, computations, and parameter normalization. Zero DOM or browser dependencies.
 - **Presentation Adapters (`pages/main/<name>-adapter.js`)**: Imports portable scripts to synchronize custom elements, render UI controls, and bridge `BroadcastChannel` events.
 
-### Declarative Agent Skills (`.agents/skills/main/`)
+### Declarative Agent Skills (`.agents/skills/`)
 
-Agent Skills follow the open Agent Skills format. Place skills in `.agents/skills/main/<skill-name>/SKILL.md`.
+Agent Skills follow the open Agent Skills format. Place skills in `.agents/skills/<skill-name>/SKILL.md`.
 
 #### Frontmatter specification
 
@@ -155,13 +152,13 @@ execution:
 
 #### Storage & Scope
 
-Skills are seeded into the main conversation's OPFS workspace (`.agents/skills/main/`) on initial boot. They do not become host filesystem commands and are scoped to the main workspace.
+Skills are seeded into the main conversation's OPFS workspace (`.agents/skills/`) on initial boot. They do not become host filesystem commands and are scoped to the main workspace.
 
 ---
 
-### Declarative Tools (`.agents/tools/main/`)
+### Declarative Tools (`.agents/tools/`)
 
-Add executable tools under `.agents/tools/main/` as JSON files. Each file defines a standard tool schema and an explicit `execution` object.
+Add executable tools under `.agents/tools/` as JSON files. Each file defines a standard tool schema and an explicit `execution` object.
 
 ```json
 {
@@ -252,7 +249,7 @@ ShadowClaw builds via `npx --yes shadow-claw@latest build --prod`. To pin to a s
 
 ### Skill & Page Purge Markers
 
-To reset bundled skills on a later deployment, add a Markdown file under `.agents/skills/main/` with this frontmatter, updating `purge-id` for each reset:
+To reset bundled skills on a later deployment, add a Markdown file under `.agents/skills/` with this frontmatter, updating `purge-id` for each reset:
 
 ```markdown
 ---
@@ -261,7 +258,7 @@ purge-id: skills-build-002
 ---
 ```
 
-The purge marker is removed from the catalog before seeding, and the main conversation's `.agents/skills/main/` OPFS directory is cleared and re-seeded with current published skills. Page purge markers (`slug: shadow-claw--purge-pages`) operate independently.
+The purge marker is removed from the catalog before seeding, and the main conversation's `.agents/skills/` OPFS directory is cleared and re-seeded with current published skills. Page purge markers (`slug: shadow-claw--purge-pages`) operate independently.
 
 ### Sidebar Visibility Options
 

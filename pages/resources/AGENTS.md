@@ -14,7 +14,7 @@ Starter template for static sites built with [ShadowClaw](https://xt-ml.github.i
 - `pages/resources/` — files copied to the site root (`robots.txt`, `llms.txt`, `AGENTS.md`, `README.md`, `manifest.json`, `404.html`, `assets/`)
 - `pages/resources/routes.json` — maps source files to pretty URLs and drives `sitemap.xml` generation
 - `shadow-claw.config.json` — site, branding, and security settings
-- `.agents/skills/main/`, `.agents/tools/main/` — agent skills and declarative tools
+- `.agents/skills/`, `.agents/tools/`, `.agents/scripts/` — agent skills, declarative tools, and helper scripts
 
 ## Conventions
 

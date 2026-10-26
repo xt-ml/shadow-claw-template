@@ -9,9 +9,9 @@ slug: "agent-memory"
 
 ### Workspace Layout & Skills Conventions
 
-- **Skills**: `.agents/skills/main/<skill-name>/SKILL.md`
-- **Declarative Tools**: `.agents/tools/main/<tool-name>.json`
-- **Portable Scripts**: `.agents/scripts/main/<script-name>.js` (Decoupled ESM modules with zero DOM dependencies)
+- **Skills**: `.agents/skills/<skill-name>/SKILL.md`
+- **Declarative Tools**: `.agents/tools/<tool-name>.json`
+- **Portable Scripts**: `.agents/scripts/<script-name>.js` (Decoupled ESM modules with zero DOM dependencies)
 - **HTTP Discovery Index**: `/.well-known/agent-skills/index.json` (Conforming to Agent Skills Discovery RFC v0.2.0)
 - **Skill Format**: Markdown file with YAML frontmatter AND a Markdown body (frontmatter is metadata only; always include a `# <Skill Title>` heading and human-readable description in the Markdown body so it renders in document previews):
 

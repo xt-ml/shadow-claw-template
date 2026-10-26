@@ -12,8 +12,8 @@ Use this skill when creating, modifying, reviewing, or validating a ShadowClaw a
 
 ## Workspace Layout Standards
 
-- **Skills**: Create each skill in its dedicated directory under `.agents/skills/<group>/<skill-name>/SKILL.md` (default group: `main`).
-- **Declarative Tools**: Define supporting declarative tools under `.agents/tools/<group>/<tool-name>.json` (default group: `main`).
+- **Skills**: Create each skill in its dedicated directory under `.agents/skills/<skill-name>/SKILL.md` (canonical flat layout; legacy `.agents/skills/main/` is supported for backward-compatible reads).
+- **Declarative Tools**: Define supporting declarative tools under `.agents/tools/<tool-name>.json` (or legacy `.agents/tools/main/<tool-name>.json`).
 - **Supporting Resources**: Co-locate skill-specific assets (reference documents, templates, helper scripts) inside the skill directory alongside `SKILL.md`.
 
 ## Workflow

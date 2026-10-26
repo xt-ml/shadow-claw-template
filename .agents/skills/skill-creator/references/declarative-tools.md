@@ -1,13 +1,12 @@
 # Declarative Tools
 
-Declarative tools allow workspace authors to define reusable custom tools using JSON definitions placed under `.agents/tools/<group>/<tool-name>.json`.
+Declarative tools allow workspace authors to define reusable custom tools using JSON definitions placed under `.agents/tools/<tool-name>.json` (or legacy `.agents/tools/<group>/<tool-name>.json`).
 
 ## Directory Structure
 
 ```text
 .agents/tools/
-└── main/
-    └── generate_random_number.json
+└── generate_random_number.json
 ```
 
 ## Schema Format
