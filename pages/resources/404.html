@@ -1,78 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>404 - Page Not Found</title>
+    <title>shadow-claw-template - redirect service</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="404 - Page Not Found" />
-    <meta name="theme-color" content="#090d16" />
+    <meta
+      name="description"
+      content="shadow-claw-template - redirect service"
+    />
     <meta name="robots" content="noindex" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <style>
-      :root {
-        --bg-color: #090d16;
-        --card-bg: #111827;
-        --border-color: #1f2937;
-        --text-primary: #f9fafb;
-        --text-secondary: #9ca3af;
-        --accent-color: #3b82f6;
-        --accent-hover: #2563eb;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--bg-color);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-          Arial, sans-serif;
-        color: var(--text-primary);
-      }
-      .container {
-        max-width: 480px;
-        margin: 20px;
-        padding: 40px 32px;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 16px;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        text-align: center;
-      }
-      .icon {
-        font-size: 3.5rem;
-        margin-bottom: 16px;
-      }
-      h1 {
-        font-size: 1.8rem;
-        margin: 0 0 12px;
-        font-weight: 700;
-        color: var(--text-primary);
-      }
-      p {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin: 0 0 28px;
-      }
-      .home-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 24px;
-        background-color: var(--accent-color);
-        color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background-color 0.2s ease;
-      }
-      .home-btn:hover {
-        background-color: var(--accent-hover);
-      }
-    </style>
     <script>
       (function () {
         const l = window.location;
@@ -83,21 +19,49 @@
 
         if (isLocalhost) return;
 
+        // store the full path + query + hash
         sessionStorage.setItem(
           "shadow-claw-github-pages-404-redirect",
           l.pathname + l.search + l.hash,
         );
 
+        // redirect to entry point
         l.replace("/shadow-claw-template/");
       })();
     </script>
   </head>
   <body>
-    <div class="container">
-      <div class="icon">🔍</div>
-      <h1>404 - Page Not Found</h1>
-      <p>The page or resource you requested could not be found.</p>
-      <a href="./" class="home-btn">Return Home</a>
-    </div>
+    <main
+      style="
+        font-family: system-ui, sans-serif;
+        padding: 2rem;
+        max-width: 40rem;
+        margin: auto;
+        line-height: 1.6;
+      "
+    >
+      <h1>404 Not Found</h1>
+      <p>
+        The requested path does not exist on
+        <strong>ShadowClaw Template</strong>.
+      </p>
+      <h2>Where to look next</h2>
+      <ul>
+        <li><a href="/shadow-claw-template/">ShadowClaw Application</a></li>
+        <li>
+          <a href="/shadow-claw-template/sitemap.xml">Site Map (sitemap.xml)</a>
+        </li>
+        <li>
+          <a href="/shadow-claw-template/llms.txt"
+            >Agent Instructions (llms.txt)</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/xt-ml/shadow-claw-template"
+            >GitHub Repository &amp; Docs</a
+          >
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
