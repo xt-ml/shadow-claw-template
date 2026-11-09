@@ -1,0 +1,19 @@
+{
+  "name": "shadow-claw-template",
+  "version": "1.0.0",
+  "description": "Template repository for creating ShadowClaw-powered progressive web applications and static sites.",
+  "type": "module",
+  "scripts": {
+    "format": "npx -y prettier -w .",
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "shadow-claw",
+    "template",
+    "pwa"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}

@@ -1,12 +1,13 @@
 {
-  "background_color": "#000000",
-  "description": "ShadowClaw Template - Browser-native AI agent.",
+  "background_color": "#121212",
+  "description": "ShadowClaw Template",
   "display": "standalone",
-  "id": "shadow-claw",
-  "name": "ShadowClaw",
-  "short_name": "ShadowClaw",
+  "id": "shadow-claw-template",
+  "name": "ShadowClaw Template",
+  "short_name": "Template",
+  "scope": ".",
   "start_url": ".",
-  "theme_color": "#000000",
+  "theme_color": "#121212",
   "share_target": {
     "action": "share/share-target.html",
     "method": "POST",
@@ -32,6 +33,12 @@
     }
   },
   "icons": [
+    {
+      "purpose": "any",
+      "sizes": "any",
+      "src": "assets/icons/favicon.svg",
+      "type": "image/svg+xml"
+    },
     {
       "purpose": "any",
       "sizes": "48x48",
@@ -64,12 +71,30 @@
     },
     {
       "purpose": "any",
+      "sizes": "180x180",
+      "src": "assets/icons/180.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "assets/icons/192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
       "sizes": "192x192",
       "src": "assets/icons/192.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
+      "sizes": "512x512",
+      "src": "assets/icons/512.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
       "sizes": "512x512",
       "src": "assets/icons/512.png",
       "type": "image/png"
@@ -90,16 +115,9 @@
   "screenshots": [
     {
       "form_factor": "wide",
-      "label": "shadow-claw",
-      "sizes": "1920x1052",
-      "src": "assets/screenshots/shadow-claw-screenshot-1920x1052.png",
-      "type": "image/png"
-    },
-    {
-      "form_factor": "narrow",
-      "label": "shadow-claw",
-      "sizes": "731x1045",
-      "src": "assets/screenshots/shadow-claw-screenshot-731x1045.png",
+      "label": "ShadowClaw Template Workbench",
+      "sizes": "1024x768",
+      "src": "assets/screenshots/shadow-claw-template-1024x768.png",
       "type": "image/png"
     }
   ]
