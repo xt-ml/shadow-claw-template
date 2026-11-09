@@ -35,12 +35,6 @@
   "icons": [
     {
       "purpose": "any",
-      "sizes": "any",
-      "src": "assets/icons/favicon.svg",
-      "type": "image/svg+xml"
-    },
-    {
-      "purpose": "any",
       "sizes": "48x48",
       "src": "assets/icons/48.png",
       "type": "image/png"
@@ -118,6 +112,13 @@
       "label": "ShadowClaw Template Workbench",
       "sizes": "1024x768",
       "src": "assets/screenshots/shadow-claw-template-1024x768.png",
+      "type": "image/png"
+    },
+    {
+      "form_factor": "narrow",
+      "label": "ShadowClaw Template Workbench",
+      "sizes": "731x1045",
+      "src": "assets/screenshots/shadow-claw-template-731x1045.png",
       "type": "image/png"
     }
   ]

@@ -36,8 +36,8 @@ test("PWA Manifest: Template manifest metadata and isolation", () => {
 
   const iconSources = manifest.icons.map((i) => i.src);
   assert.ok(
-    iconSources.includes("assets/icons/favicon.svg"),
-    "Must include favicon.svg",
+    !iconSources.includes("assets/icons/favicon.svg"),
+    "manifest.icons must not include SVG favicon (avoids Chrome DevTools image decode failure)",
   );
   assert.ok(
     iconSources.includes("assets/icons/180.png"),
@@ -52,12 +52,17 @@ test("PWA Manifest: Template manifest metadata and isolation", () => {
     "Must include 512.png",
   );
 
-  // Screenshots must exist and must not reference ShadowClaw red lobster screenshots
+  // Screenshots: must include both wide (desktop) and narrow (mobile) for Richer PWA Install UI
+  const screenshots = manifest.screenshots || [];
   assert.ok(
-    manifest.screenshots && manifest.screenshots.length > 0,
-    "Must declare screenshots",
+    screenshots.some((s) => s.form_factor === "wide"),
+    "manifest.screenshots must include a wide screenshot for desktop Richer PWA Install UI",
   );
-  for (const s of manifest.screenshots) {
+  assert.ok(
+    screenshots.some((s) => s.form_factor === "narrow" || !s.form_factor),
+    "manifest.screenshots must include a narrow/mobile screenshot for mobile Richer PWA Install UI",
+  );
+  for (const s of screenshots) {
     assert.doesNotMatch(
       s.src,
       /shadow-claw-screenshot/,
