@@ -65,6 +65,12 @@
     },
     {
       "purpose": "any",
+      "sizes": "167x167",
+      "src": "assets/icons/167.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
       "sizes": "180x180",
       "src": "assets/icons/180.png",
       "type": "image/png"

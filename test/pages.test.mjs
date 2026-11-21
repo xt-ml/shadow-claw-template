@@ -40,6 +40,10 @@ test("PWA Manifest: Template manifest metadata and isolation", () => {
     "manifest.icons must not include SVG favicon (avoids Chrome DevTools image decode failure)",
   );
   assert.ok(
+    iconSources.includes("assets/icons/167.png"),
+    "Must include 167.png for iPad Pro Apple touch icons",
+  );
+  assert.ok(
     iconSources.includes("assets/icons/180.png"),
     "Must include 180.png for Apple/high-res launchers",
   );
@@ -103,6 +107,7 @@ test("Iconography: Template icons are template-specific and do not collide with 
     "96.png",
     "128.png",
     "152.png",
+    "167.png",
     "180.png",
     "192.png",
     "512.png",
