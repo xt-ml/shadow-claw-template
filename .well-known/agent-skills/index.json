@@ -48,7 +48,11 @@
     }
   ],
   "dependencies": {
-    "tools": ["../../.agents/tools/generate_random_number.json"],
-    "scripts": ["../../.agents/scripts/starter-tools.js"]
+    "tools": [
+      "../../.agents/tools/generate_random_number.json"
+    ],
+    "scripts": [
+      "../../.agents/scripts/starter-tools.js"
+    ]
   }
 }
