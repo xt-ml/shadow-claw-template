@@ -15,6 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.9.10",
-    "shadow-claw": "^1.67.0"
+    "shadow-claw": "^1.67.1"
   }
 }
